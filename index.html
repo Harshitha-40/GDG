@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Access Initiative</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.avif">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Health Connect</h1>
+        <div class="logo-container">
+            <img src="/images/favicon.avif" alt="health connect logo" class="logo">
+        <h1 >Health Connect</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -24,10 +28,11 @@
     </header>
 
     <div class="features-container">
+        
         <section class="feature-card">
             <h2>Book Appointments</h2>
             <p>Easy, voice-based or text-based booking system for appointments.</p>
-            <button type="submit"><a href="booking.html" class="feature-link">Book Now</a></button>
+            <button type="submit"> <a href="booking.html" class="feature-link" target="_blank">Book Now</a></button>
         </section>
 
         <section class="feature-card">
@@ -39,13 +44,12 @@
         <section class="feature-card">
             <h2>Health Education</h2>
             <p>Receive educational content to keep you informed about your health.</p>
-            <button type="submit"><a href="feedback.html" class="feature-link">Explore</a></button>
+            <button type="submit"> <a href="healtheducation.html" target="_blank" class="feature-link">Explore</a></button>
         </section>
-
         <section class="feature-card">
-            <h2>Vaccination</h2>
-            <p>Get Vaccinated at your near by places.</p>
-            <button type="submit"><a href="Vaccination.html" class="feature-link">Get Alert</a></button>
+            <h2>vaccination alerts</h2>
+            <p>"Get timely vaccination alerts to stay protected."</p>
+            <button type="submit"><a href="vaccination.html" class="feature-link">Get Alerts</a></button>
         </section>
     </div>
     <section id="home">
@@ -59,7 +63,7 @@
           voice-based booking, multi-language support, and SMS notifications, we strive to make healthcare more accessible and user-friendly.
            Join us in our mission to improve health outcomes and enhance the quality of life for everyone in our communities!
         </p>
-        <center></centre><img src="pic.jpg" width="1350px"></center>
+        <center></centre><img src="/images/Salford & Co..png" width="1350px"></center>
     </section>
 
     <section id="services">
@@ -90,7 +94,7 @@
                   for both mental and physical well-being. Additionally, mental health should not be neglected; practices like mindfulness,
                   meditation, and hobbies can help manage stress. Regular check-ups with healthcare providers ensure early detection and better 
                   management of health issues. Lastly, avoiding harmful habits such as excessive alcohol consumption and smoking is imperative.
-                   By incorporating these practices, one can maintain a healthy and fulfilling life.</p>
+                   By incorporating these practices, one can maintain a healthy and fulfilling life.</p>
         </div>
         <div class="service">
             <h3><i class="fas fa-users"></i> Local Services Education</h3>
@@ -112,52 +116,35 @@
     <section id="education">
         <h2>Health Education Resources</h2>
         <ul>
-            <li><a href="index1.html" target="_blank">Preventive Care Tips</a></li>
-            <li><a href="#">Healthy Living Guides</a></li>
-            <li><a href="#">Nutrition and Wellness</a></li>
+            <li><a href="preventive care tips.html" target="_blank">Preventive Care Tips</a></li>
+            <li><a href="healthy living guides.html" target="_blank">Healthy Living Guides</a></li>
+            <li><a href="nutrition and wellness.html" target="_blank">Nutrition and Wellness</a></li>
         </ul>
     </section>
 
     <section id="community">
-        <h2>Patient Details</h2>
-        <div class="form-container">
-            <form id="patient-details-form">
-                <div class="form-group">
-                    <label for="patient-name">Patient Name:</label>
-                    <input type="text" id="patient-name" name="patient-name" required placeholder="Enter the patient's name">
-                </div>
+        <h2>Patient Details </h2>
+        <form id="forum-form">
+            <label for="forum-name"> Patient Name:</label>
+            <input type="text" id="forum-name" name="forum-name" placeholder="enter the patient name" required>
+            <label for="forum-message">Age:</label>
+            <input type="age" id="forum-name" name="forum-name" placeholder="enter your age"min="1" required>
+            <label for="forum-message">Sex:</label>
+            <input type="radio" id="male" value="male" name="title" >
+            <label for="male" style="display: inline-block">male</label>
+            <input type="radio" id="female" value="female" name="title">
+            <label for="female" style="display: inline-block">female</label>
+        <br>
+            <label for="phone">phone Number:</label>
+            <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br>
+            <label for="forum-message" >Patient's Problem:</label>
+            <textarea id="forum-message" name="forum-message"  required></textarea>
 
-                <div class="form-group">
-                    <label for="patient-age">Age:</label>
-                    <input type="number" id="patient-age" name="patient-age" min="1" required placeholder="Enter the patient's age">
-                </div>
-
-                <div class="form-group">
-                    <label for="patient-sex">Sex:</label><br>
-                    <input type="radio" id="male" name="sex" value="male">
-                    <label for="male" style="display: inline-block;">Male</label><br>
-                    <input type="radio" id="female" name="sex" value="female">
-                    <label for="female" style="display: inline-block;">Female</label><br>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone-number">Phone Number:</label>
-                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="patient-problem">Patient's Problem:</label>
-                    <textarea id="patient-problem" name="patient-problem" rows="4" required placeholder="Describe the patient's problem"></textarea>
-                </div>
-
-                <button type="submit" class="button">Submit Details</button>
-            </form>
-
-            <div id="forum-response" class="hidden"></div>
-        </div>
+            <button type="submit">submit details</button>
+        </form>
+        <div id="forum-response" class="hidden"></div>
+       
     </section>
-
-
 
     <section id="contact">
         <div class="feedback-container">
@@ -165,12 +152,12 @@
             <form id="feedbackForm">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" required>
+                    <input type="text" id="name" class="form-control" placeholder="enter your name"required>
                 </div>
     
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" required>
+                    <input type="email" id="email" class="form-control" placeholder="example@gmail.com"required>
                 </div>
     
                 <div class="form-group">
@@ -178,19 +165,19 @@
                     <div class="rating-group">
                         <div class="rating-option">
                             <input type="radio" id="rating1" name="rating" value="1" required>
-                            <label for="rating1" style="display: inline-block">Poor</label>
+                            <label for="rating1" style="display: inline-block">Poor 😕</label>
                         </div>
                         <div class="rating-option">
                             <input type="radio" id="rating2" name="rating" value="2">
-                            <label for="rating2" style="display: inline-block">Fair</label>
+                            <label for="rating2" style="display: inline-block">Fair 😐</label>
                         </div>
                         <div class="rating-option">
                             <input type="radio" id="rating3" name="rating" value="3">
-                            <label for="rating3" style="display: inline-block">Good</label>
+                            <label for="rating3" style="display: inline-block">Good 😊</label>
                         </div>
                         <div class="rating-option">
                             <input type="radio" id="rating4" name="rating" value="4">
-                            <label for="rating4" style="display: inline-block">Excellent</label>
+                            <label for="rating4" style="display: inline-block">Excellent 😍</label>
                         </div>
                     </div>
                 </div>
@@ -202,9 +189,8 @@
     
                 <button type="submit" class="submit-btn">Submit Feedback</button>
             </form>
-            <!-- <div id="successMessage" class="success-message">
-                Thank you for your feedback!
-            </div> -->
+            <div id="successMessage" class="success-message">
+            </div>
         </div>
     
         <script>
@@ -218,30 +204,8 @@
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Health Access Initiative</h3>
-                <p>Empowering underserved communities with accessible healthcare 
-                    solutions.</p>
-            </div>
-            <div class="footer-section" align="center">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@healthconnect.com">healthconnect@gmail.com</a></p>
-                <p>Phone: <a href="tel:+919383374837">+91 9383374837</a></p>
-                <p>Address: 123 Health St, Bhimavaram city, India</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <p class="footer-bottom">&copy; 2024 Health Access Initiative. All rights reserved.</p>
+        <p>&copy; 2023 Health Access Initiative. All rights reserved.</p>
     </footer>
-    <!-- this is a comment -->
-    
 
     <script src="script.js"></script>
 </body>
