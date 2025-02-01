@@ -7,7 +7,61 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.avif">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script type="text/javascript">                    -->add from this line
+    <style>
+        /* Section Style */
+        #doctor-collab {
+            background-color: #e6f7f2; /* Light teal background */
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Centers the content */
+            text-align: center;
+        }
+
+        /* Heading Style */
+        #doctor-collab h2 {
+            font-size: 24px;
+            color: #0066cc; /* Blue color for trust */
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph Style */
+        #doctor-collab p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Link Style */
+        #doctor-collab a {
+            color: #80c5b2; /* Vibrant green for clickable link */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #doctor-collab a:hover {
+            color: #66b39d; /* Darker green on hover */
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            #doctor-collab {
+                padding: 20px;
+                margin: 15px;
+            }
+
+            #doctor-collab h2 {
+                font-size: 22px;
+            }
+
+            #doctor-collab p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement(
                 { pageLanguage: 'en', includedLanguages: 'en,hi,te,ta,fr,es,ar,zh', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
@@ -15,8 +69,8 @@
             );
         }
     </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>      ---> upto this line
-
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 </head>
 <body>
     <header>
@@ -25,15 +79,17 @@
         <h1 >Health Connect</h1>
         </div>
         <nav>
-            <div id="google_translate_element"></div>                    --> add this line
+            <div id="google_translate_element"></div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#education">Health Education</a></li>
                 <li><a href="#community">Patient Details</a></li>
                 <li><a href="#contact">Feedback</a></li>
+                
             </ul>
+            
             <p align='right'>Emergency number:+91 9383374837</p>
+
 
         </nav>
     </header>
@@ -43,19 +99,19 @@
         <section class="feature-card">
             <h2>Book Appointments</h2>
             <p>Easy, voice-based or text-based booking system for appointments.</p>
-            <button type="submit"> <a href="booking.html" class="feature-link" target="_blank">Book Now</a></button>
+            <button type="submit"> <a href="booking.html" class="feature-link" >Book Now</a></button>
         </section>
 
         <section class="feature-card">
             <h2>Telemedicine</h2>
             <p>Access doctors through video calls for remote consultations.</p>
-            <button type="submit"><a href="http://127.0.0.1:5000" class="feature-link">Start Consultation</a></button>
+            <button type="submit"><a href=" http://127.0.0.1:5000" class="feature-link">Start Consultation</a></button>
         </section>
 
         <section class="feature-card">
             <h2>Health Education</h2>
             <p>Receive educational content to keep you informed about your health.</p>
-            <button type="submit"> <a href="healtheducation.html" target="_blank" class="feature-link">Explore</a></button>
+            <button type="submit"> <a href="healtheducation.html"  class="feature-link">Explore</a></button>
         </section>
         <section class="feature-card">
             <h2>vaccination alerts</h2>
@@ -124,7 +180,7 @@
         </div>
     </section>
 
-   
+    
 
     <section id="community">
         <h2>Patient Details </h2>
@@ -207,10 +263,40 @@
         </script>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Health Access Initiative. All rights reserved.</p>
-    </footer>
+    <section id="doctor-collab">
+        <h2>Join Us as a Healthcare Partner</h2>
+        <p>Are you a doctor passionate about serving underserved communities? Collaborate with us to provide healthcare access to those in need.</p>
+        <p>📩 Interested doctors can email us at: <a href="mailto:healthconnect@gmail.com">healthconnect@gmail.com</a></p>
+    </section>
+   
+    
 
     <script src="script.js"></script>
+    
+   
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Health Access Initiative</h3>
+                <p>Empowering underserved communities with accessible healthcare 
+                    solutions.</p>
+            </div>
+            <div class="footer-section" align="center">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@healthconnect.com">healthconnect@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919383374837">+91 9383374837</a></p>
+                <p>Address: 123 Health St, Bhimavaram city, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2024 Health Access Initiative. All rights reserved.</p>
+    </footer>
 </body>
 </html>
