@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send SMS Notification</title>
+</head>
+<body>
+
+    <h2>Send SMS Notification</h2>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" placeholder="+1234567890">
+
+    <br><br>
+
+    <label for="smsMessage">Message:</label>
+    <textarea id="smsMessage" placeholder="Enter your message"></textarea>
+
+    <br><br>
+
+    <button onclick="sendSMS()">Send SMS</button>
+
+    <!-- ✅ Add the JavaScript code at the end of the body -->
+    <script>
+        function sendSMS() {
+            const phone = document.getElementById("phoneNumber").value;
+            const message = document.getElementById("smsMessage").value;
+
+            if (!phone || !message) {
+                alert("Please enter both phone number and message.");
+                return;
+            }
+
+            fetch("http://localhost:3000/send-sms", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ phone, message })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("SMS Sent: " + data);
+            })
+            .catch(error => {
+                alert("Error sending SMS.");
+                console.error(error);
+            });
+        }
+    </script>
+
+</body>
+</html>
